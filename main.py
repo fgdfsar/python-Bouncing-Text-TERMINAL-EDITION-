@@ -3,7 +3,7 @@ import sys, random, time, bext
 WIDTH, HEIGHT = bext.size()
 WIDTH -= 1
 
-NUMBER_OF_NAMES = int(input("number of bouncing texts:\n"))  # (!) Try changing this to 1 or 100.
+NUMBER_OF_NAMES = int(input("number of bouncing texts:\n"))
 NAME = input("text:\n")
 COLORS = ["red", "green", "yellow", "blue", "magenta", "cyan", "white"]
 TRAIL=(True if input("has trail(True of False):")=="True" else False)
@@ -97,7 +97,6 @@ def main():
         print(f"corner bounces:{cornerBounces}", end="")
         
         for name in names:
-            # Draw the names at their new location:
             bext.goto(name[X], name[Y])
             bext.fg(name[COLOR])
             print(NAME, end="")
